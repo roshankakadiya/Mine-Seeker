@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".UI.Main_Menu">
+
+    <TextView
+        android:id="@+id/mainMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="casual"
+        android:text="Main Menu"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/playGameButton"
+        android:layout_width="171dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="24dp"
+        android:background="#66FFFFFF"
+        android:fontFamily="casual"
+        android:text="PLAY GAME"
+        android:textColor="#030304"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/optionsButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/optionsButton"
+        android:layout_width="170dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="24dp"
+        android:background="#65FFFFFF"
+        android:fontFamily="casual"
+        android:text="OPTIONS"
+        android:textColor="#070000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/helpButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="172dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="80dp"
+        android:background="#65FFFFFF"
+        android:fontFamily="casual"
+        android:text="HELP"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

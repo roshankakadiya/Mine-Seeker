@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helpScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_layer"
+    tools:context=".UI.Help_Screen">
+
+    <TextView
+        android:id="@+id/helpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bungee_shade"
+        android:text="HELP"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/helpScreenText"
+        android:layout_width="665dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="serif-monospace"
+        android:text="@string/HELPTEXT"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helpTitle" />
+
+    <Button
+        android:id="@+id/returnMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="#00FFFFFF"
+        android:text="Return To Main Menu"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/aboutAuthors"
+        android:layout_width="365dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="12dp"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:text="@string/authorTEXT"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helpScreenText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
