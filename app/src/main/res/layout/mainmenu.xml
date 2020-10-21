@@ -10,54 +10,56 @@
 
     <TextView
         android:id="@+id/mainMenuTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="271dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cardview_shadow_end_color"
         android:fontFamily="monospace"
         android:text="Main Menu"
-        android:textColor="#3F51B5"
+        android:textColor="#070707"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/playGameButton"
+        android:id="@+id/playbutton"
         android:layout_width="171dp"
         android:layout_height="72dp"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="24dp"
-        android:background="#AE03A9F4"
+        android:background="@drawable/third_layer"
         android:fontFamily="sans-serif"
         android:text="PLAY GAME"
         android:textColor="#030304"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/optionsButton"
+        app:layout_constraintBottom_toTopOf="@+id/optionbutton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/optionsButton"
+        android:id="@+id/optionbutton"
         android:layout_width="170dp"
         android:layout_height="68dp"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="24dp"
-        android:background="#9C03A9F4"
+        android:background="@drawable/third_layer"
         android:fontFamily="sans-serif"
         android:text="OPTIONS"
         android:textColor="#070000"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/helpButton"
+        app:layout_constraintBottom_toTopOf="@+id/hrlpbutton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/helpButton"
+        android:id="@+id/hrlpbutton"
         android:layout_width="172dp"
         android:layout_height="65dp"
         android:layout_marginStart="80dp"
-        android:background="#9A03A9F4"
+        android:background="@drawable/third_layer"
         android:fontFamily="sans-serif"
         android:text="HELP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +71,19 @@
         android:layout_width="524dp"
         android:layout_height="478dp"
         android:layout_marginStart="100dp"
-        app:layout_constraintStart_toEndOf="@+id/optionsButton"
-        app:srcCompat="@drawable/waterminebackground1"
+        app:layout_constraintStart_toEndOf="@+id/optionbutton"
+        app:srcCompat="@drawable/aquagif"
         tools:layout_editor_absoluteY="328dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="281dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="190dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

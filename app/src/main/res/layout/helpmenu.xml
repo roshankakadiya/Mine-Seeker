@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/third_layer"
-    tools:context=".UI.Help_Screen">
+    tools:context=".UI.HelpMenu">
 
     <TextView
         android:id="@+id/helpTitle"

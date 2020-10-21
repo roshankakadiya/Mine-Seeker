@@ -1,21 +1,21 @@
 package com.example.minesweeper.model;
 
-public class Board {
+public class GamePlay {
     private int clickCount;
-    private static Board instance;
+    private static GamePlay instance;
     private int rows;
     private int columns;
     private int noOfMines;
     private int usedScans;
     private int minesFound;
-    public Board(){
+    public GamePlay(){
         minesFound=0;
         usedScans=0;
 
     }
-    public static Board getInstance() {
+    public static GamePlay getInstance() {
         if (instance == null) {
-            instance = new Board();
+            instance = new GamePlay();
         }
         return instance;
     }

@@ -6,93 +6,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".UI.Options_Menu">
+    tools:context=".UI.Option_tab">
 
     <TextView
         android:id="@+id/settingsTextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="17dp"
+        android:layout_width="348dp"
+        android:layout_height="95dp"
         android:fontFamily="@font/bungee_shade"
-        android:text="Settings"
+        android:text="Board Settings"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/radio_group_mine_size"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="30dp" />
 
     <TextView
         android:id="@+id/boardSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Board Size: "
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/boardsize"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingsTextview" />
+        app:layout_constraintTop_toBottomOf="@+id/noOfMines" />
 
     <Button
-        android:id="@+id/returnSettingsButton"
+        android:id="@+id/backbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="16dp"
         android:background="#00FFFFFF"
-        android:text="Return"
+        android:text="Back"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <RadioGroup
-        android:id="@+id/radio_group_mine_size"
-        android:layout_width="286dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginEnd="351dp"
-        android:layout_marginBottom="187dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/watermine_size"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
+        android:background="#7EFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/boardsize"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/noOfMines"
-        app:layout_constraintStart_toStartOf="@+id/boardSize"
         app:layout_constraintTop_toBottomOf="@+id/settingsTextview" />
 
     <RadioGroup
-        android:id="@+id/radio_board_specs"
-        android:layout_width="286dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="32dp"
-        android:background="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/radio_group_mine_size"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/radio_group_mine_size"
-        app:layout_constraintTop_toBottomOf="@+id/radio_group_mine_size"
+        android:id="@+id/boardsize"
+        android:layout_width="206dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="32dp"
+        android:background="#8DFFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/resetbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOfMines"
         tools:visibility="visible" />
 
     <TextView
         android:id="@+id/noOfMines"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="78dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="150dp"
         android:fontFamily="sans-serif-black"
-        android:text="Zombies"
+        android:text="Watermines"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/radio_group_mine_size"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/watermine_size"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingsTextview" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/reset"
+        android:id="@+id/resetbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -102,6 +96,6 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/returnSettingsButton" />
+        app:layout_constraintEnd_toStartOf="@+id/backbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
