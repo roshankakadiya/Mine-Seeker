@@ -5,7 +5,7 @@
     android:id="@+id/gamePlayLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/third_layer"
     tools:context=".UI.Play">
 
     <TextView
