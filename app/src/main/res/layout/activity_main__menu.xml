@@ -13,10 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:fontFamily="casual"
+        android:fontFamily="monospace"
         android:text="Main Menu"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
+        android:textColor="#3F51B5"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +28,11 @@
         android:layout_height="72dp"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="24dp"
-        android:background="#66FFFFFF"
-        android:fontFamily="casual"
+        android:background="#AE03A9F4"
+        android:fontFamily="sans-serif"
         android:text="PLAY GAME"
         android:textColor="#030304"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/optionsButton"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -42,11 +42,11 @@
         android:layout_height="68dp"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="24dp"
-        android:background="#65FFFFFF"
-        android:fontFamily="casual"
+        android:background="#9C03A9F4"
+        android:fontFamily="sans-serif"
         android:text="OPTIONS"
         android:textColor="#070000"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/helpButton"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,13 +55,22 @@
         android:layout_width="172dp"
         android:layout_height="65dp"
         android:layout_marginStart="80dp"
-        android:background="#65FFFFFF"
-        android:fontFamily="casual"
+        android:background="#9A03A9F4"
+        android:fontFamily="sans-serif"
         android:text="HELP"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.852" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="524dp"
+        android:layout_height="478dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintStart_toEndOf="@+id/optionsButton"
+        app:srcCompat="@drawable/waterminebackground1"
+        tools:layout_editor_absoluteY="328dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,8 +47,8 @@
         android:id="@+id/imageView8"
         android:layout_width="174dp"
         android:layout_height="205dp"
+        app:layout_constraintBottom_toTopOf="@+id/skipButton"
         app:srcCompat="@drawable/watermine"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="312dp" />
+        tools:layout_editor_absoluteX="237dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
