@@ -17,8 +17,8 @@ public class HelpMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.helpmenu);
 
-        Button returnToMainMenu = (Button)findViewById(R.id.returnMainMenu);
-        returnToMainMenu.setOnClickListener(new View.OnClickListener() {
+        Button returnbutton = (Button)findViewById(R.id.returnMainMenu);
+        returnbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -26,8 +26,8 @@ public class HelpMenu extends AppCompatActivity {
         });
     }
 
-    public static Intent makeLaunchIntent(Context c){
-        Intent intent = new Intent(c, HelpMenu.class);
+    public static Intent makeLaunchIntent(Context con){
+        Intent intent = new Intent(con, HelpMenu.class);
         return intent;
     }
 }

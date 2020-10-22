@@ -19,6 +19,9 @@
         The Goal is to find all water mines using minimun number of scans.\n
         Tap a block to verify whether these areater mines or not.
         If there is no water mine, a scan reveals the number of hidden water mines in the same row and column.\n
+        PNG images taken from : www.pinclipart.com. \n
+        Background taken from : assets.realclear.com
+        Logo from : https://minesweeper.onl/
 
     </string>
     <string name="authorTEXT">Created by Roshan Kakadiya.
