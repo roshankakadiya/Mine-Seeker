@@ -28,39 +28,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // animationPlay();
+        animationPlay();
         Button skipButton = (Button) findViewById(R.id.skipButton);
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mainMenu = Main_Menu.makeLaunchIntent(MainActivity.this);
                 startActivity(mainMenu);
-                //setGames();
+
             }
         });
 
     }
-    //private void animationPlay() {
+    private void animationPlay() {
 
-       // TextView title = (TextView) findViewById(R.id.titleGame);
-       // YoYo.with(Techniques.FadeIn)
-             //   .duration(4000)
-             //   .repeat(0)
-             //   .playOn(title);
-       // ImageView bombImage = (ImageView) findViewById(R.id.zombie_Face);
-       // YoYo.with(Techniques.FadeIn)
-              //  .duration(4000)
-               // .repeat(0)
-              //  .playOn(bombImage);
-       // new Handler().postDelayed(new Runnable() {
-           // @Override
-          //  public void run() {
-              //  Intent MainMenu = Main_Menu.makeLaunchIntent(MainActivity.this);
-              //  startActivity(MainMenu);
-           // }
-       // },4000);
+        ImageView title = (ImageView) findViewById(R.id.logomain);
+        YoYo.with(Techniques.FadeIn)
+                .duration(5000)
+                .repeat(0)
+                .playOn(title);
+       ImageView bombImage = (ImageView) findViewById(R.id.waterminemain);
+        YoYo.with(Techniques.FadeIn)
+                .duration(5000)
+                .repeat(0)
+                .playOn(bombImage);
+        new Handler().postDelayed(new Runnable() {
+           @Override
+            public void run() {
+                Intent MainMenu = Main_Menu.makeLaunchIntent(MainActivity.this);
+                startActivity(MainMenu);
+            }
+        },5000);
 
-   // }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
