@@ -41,10 +41,10 @@ public class Option_tab extends AppCompatActivity {
         createBoardSize();
         createMineSize();
         SetupResetButton();
-        int savedRowValue = getNumRows(this);
-        int savedColValue = getNumCols(this);
+        int savedRow = getNumRows(this);
+        int savedCol = getNumCols(this);
         int savedMinesValue = getNumMine(this);
-        Toast.makeText(this, "Default Board Size : " + savedRowValue + " X " + savedColValue, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Default Board Size : " + savedRow + " X " + savedCol, Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "Default Number of Zombies: "+ savedMinesValue, Toast.LENGTH_SHORT).show();
     }
 
@@ -97,7 +97,7 @@ public class Option_tab extends AppCompatActivity {
             final int numMine =numMines[i];
             RadioButton button = new RadioButton(this);
             button.setText(getString(R.string.numMine,numMine));
-            // Set onclick callback
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -107,10 +107,10 @@ public class Option_tab extends AppCompatActivity {
 
                 }
             });
-            // Add radiogrp
+
             group.addView(button);
 
-            //select default button
+
             if(numMine == getNumMine(this)) {
                 button.setChecked(true);
             }
@@ -145,9 +145,9 @@ public class Option_tab extends AppCompatActivity {
     public static int getNumMine(Context context){
         int defaultNumMine = context.getResources().getInteger(R.integer.default_mines);
         SharedPreferences prefs = context.getSharedPreferences(MINEPREFS, MODE_PRIVATE);
-        int BoardZombies = prefs.getInt(NUMMINE,defaultNumMine);
-        Log.i("BoardZombie",""+ BoardZombies);
-        return BoardZombies;
+        int water_mines = prefs.getInt(NUMMINE,defaultNumMine);
+        Log.i("Water Mines",""+ water_mines);
+        return water_mines;
     }
 
     private void SetupResetButton() {
@@ -159,10 +159,7 @@ public class Option_tab extends AppCompatActivity {
                 int defaultMines = getResources().getInteger(R.integer.default_mines);
                 int defaultRows = getResources().getInteger(R.integer.default_rows);
                 int defaultColumns = getResources().getInteger(R.integer.default_cols);
-                /*gameBoard.setMineNum(defaultMines);
-                gameBoard.setBoardRow(defaultRows);
-                gameBoard.setBoardCol(defaultColumns);
-                */
+
                 SaveBoardSpecs(defaultRows,defaultColumns);
                 SaveMineInstalled(defaultMines);
                 finish();

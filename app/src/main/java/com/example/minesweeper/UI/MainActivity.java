@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        animationPlay();
+        animation();
         Button skipButton = (Button) findViewById(R.id.skipButton);
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    private void animationPlay() {
+    private void animation() {
 
         ImageView title = (ImageView) findViewById(R.id.logomain);
         YoYo.with(Techniques.FadeIn)

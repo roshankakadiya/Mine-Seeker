@@ -26,13 +26,13 @@ public class Main_Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 played++;
-                Intent launchGame = Play.makeLaunchIntent(Main_Menu.this, Option_tab.getNumRows(Main_Menu.this), Option_tab.getNumCols(Main_Menu.this), Option_tab.getNumMine(Main_Menu.this));
-                startActivity(launchGame);
+                Intent launch = Play.makeLaunchIntent(Main_Menu.this, Option_tab.getNumRows(Main_Menu.this), Option_tab.getNumCols(Main_Menu.this), Option_tab.getNumMine(Main_Menu.this));
+                startActivity(launch);
             }
         });
 
-        Button options = (Button) findViewById(R.id.optionbutton);
-        options.setOnClickListener(new View.OnClickListener() {
+        Button opt = (Button) findViewById(R.id.optionbutton);
+        opt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent optionsScreen = Option_tab.makeLaunchIntent(Main_Menu.this);

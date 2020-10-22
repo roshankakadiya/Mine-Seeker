@@ -88,7 +88,7 @@ public class Play extends AppCompatActivity {
     }
 
 
-    private void setRandomZombies(Button[][] table){
+    private void setWaterMines(Button[][] table){
         Random rand = new Random();
         int randomRow;
         int randomCol;
@@ -107,7 +107,7 @@ public class Play extends AppCompatActivity {
     }
     //
     private void mines(final Button[][] butt){
-        final MediaPlayer zombieSound = MediaPlayer.create(this,R.raw.voice );
+        final MediaPlayer sound = MediaPlayer.create(this,R.raw.voice );
         for(int i = 0 ; i < Num_row;i++){
             for(int j = 0; j < Num_col;j++){
                 if(butt[i][j].getText() == "Set"){
@@ -122,7 +122,7 @@ public class Play extends AppCompatActivity {
                     b.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            zombieSound.start();
+                            sound.start();
                             setScansText();
                             b.setBackground(new BitmapDrawable(resource, scaledBitmap));
                             if(watermine_found < Num_watermines){
@@ -132,8 +132,8 @@ public class Play extends AppCompatActivity {
                                 mineText();
 
                                 if(watermine_found == Num_watermines){
-                                    // Insert the alert dialogue here boi.
-                                    Toast.makeText(Play.this, "All Zombies have been Found. GAME OVER!", Toast.LENGTH_SHORT).show();
+
+                                    Toast.makeText(Play.this, "All Water Mines have been Found.", Toast.LENGTH_SHORT).show();
                                     for(int m = 0; m < Num_row;m++){
                                         for(int n = 0 ; n < Num_col;n++){
                                             butt[m][n].setText("0");
@@ -188,7 +188,7 @@ public class Play extends AppCompatActivity {
 
     private void mineText() {
         TextView noOfMines = (TextView)findViewById(R.id.foundText);
-        noOfMines.setText("Found " + watermine_found + " of " + Num_watermines + " zombies");
+        noOfMines.setText("Found " + watermine_found + " of " + Num_watermines + " Water Mines");
     }
 
 
@@ -265,15 +265,15 @@ public class Play extends AppCompatActivity {
         Num_watermines = intent.getIntExtra("Sir",6);
         buttons = new Button[Num_row][Num_col];
         populateMines();
-        setRandomZombies(buttons);
+        setWaterMines(buttons);
         mines(buttons);
     }
 
-    public static Intent makeLaunchIntent(Context c,int rows,int cols,int zombies){
+    public static Intent makeLaunchIntent(Context c,int rows,int cols,int watermine){
         Intent intent = new Intent(c, Play.class);
         intent.putExtra("Hello",rows);
         intent.putExtra("World",cols);
-        intent.putExtra("Sir",zombies);
+        intent.putExtra("Sir",watermine);
         return intent;
     }
 }
